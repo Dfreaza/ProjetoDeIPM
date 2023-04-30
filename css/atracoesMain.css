@@ -15,9 +15,37 @@ img {
     margin-right: auto;
     border-radius: 8%;
 }
-label {
-    font-style: coolvetica;
+#at1, #at2, #at3, #at4 {
     font-size: larger;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border-radius: 10%;
+    background-color:#0c72b1;
+}
+
+#at1 {
+    top: 73%;
+    left: 50%;
+    padding: 10px 89px;
+}
+
+#at2 {
+    top: 140%;
+    left: 50%;
+    padding: 10px 103px;
+}
+
+#at3 {
+    top: 208%;
+    left: 50%;
+    padding: 10px 87px;
+}
+
+#at4 {
+    top: 275%;
+    left: 50%;
+    padding: 10px 77px;
 }
 
 
