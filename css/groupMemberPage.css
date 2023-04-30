@@ -44,6 +44,8 @@ body {
     width:auto;
     float:left;
     background-color:white;
+    border-radius: 20%;
+    margin-left: 6px;
 }
   
 #name {
@@ -55,10 +57,33 @@ body {
 }
 
 #colorSquare {
-    left: 38%;
-    top: 30%;
+    left: 40%;
+    top: 33%;
     position: absolute;
     height: 10%;
     width: 10%;
     background-color:yellow;
+}
+
+#confirmationArea {
+    height:50%;
+    margin-top: 6%;
+}
+.pickMe {
+    border: 5px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 5px;
+    margin-bottom: 7px;
+}
+
+#notMyBuddy {
+    background-color:rgb(124, 27, 27);
+}
+#confirmationButton{
+    background-color: rgb(13, 87, 13);
 }

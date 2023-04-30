@@ -2,19 +2,7 @@
 <html>
     <head>
         <title>Friend Status</title>
-        <style>
-        /* Style for friend status and color */
-        .friend-status {
-            font-weight: bold;
-        }
-        .friend-color {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin-left: 10px;
-            border-radius: 50%;
-        }
-        </style>
+       
         <link rel="stylesheet" href="css/groupMemberPage.css">
         <script src="js/groupMember.js"></script>
     </head>
@@ -24,11 +12,11 @@
         <img alt="friendImage" id="friendImg">
         <div id="changeColor">
             <div id="colorSquare"></div>
-            <p style="left: 55%;top: 28%;font-size: 18px;">Change color</p>
+            <p id="color" style="left: 53%;top: 31%;font-size: 18px;position:absolute;">Change color</p>
         </div>
-        <div class="friend-details">
-        <p>Not my buddy</p>
-        <p>All ok</p>
+        <div id="confirmationArea">
+            <p class="pickMe" id="notMyBuddy">Este não é o meu amigo</p>
+            <p class= "pickMe" id="confirmationButton">É o meu amigo</p>
       </div>
     </div>
   </body>

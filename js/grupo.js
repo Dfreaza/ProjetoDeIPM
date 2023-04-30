@@ -34,7 +34,12 @@ function startFindingGroupAnimation() {
 
 function displayFoundFriends() {
     console.log("displaying friends");
-    let people = [new groupFriend("John", [0,128,255]),
+    let people;
+
+    if (sessionStorage.getItem("hasGroup") === "true"){
+        people = JSON.parse(sessionStorage.getItem("group"));
+    } else {
+        people = [new groupFriend("John", [0,128,255]),
             new groupFriend("Katie", [255,0,0]),
             new groupFriend("Gabriel", [0,255,0]),
             new groupFriend("Theodore", [255,125,0]),
@@ -44,6 +49,7 @@ function displayFoundFriends() {
             new groupFriend("Lily", [125,125,250])
         
         ];
+    }
 
 
     //changing content of the watch
