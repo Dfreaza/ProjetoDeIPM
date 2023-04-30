@@ -1,0 +1,64 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #045;
+}
+  
+body {
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+    position:fixed;
+    top:25%;
+    left: 25%;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    overflow:hidden;
+    background-color: rgba(0,0,0, 0.787);
+    color:white;
+    /*background-color: rgba(170, 39, 170, 0.787);*/
+    
+    outline: solid;
+    outline-color: rgba(170, 39, 170);
+    outline-offset:-12px;  
+}
+
+#friend {
+    overflow-y: scroll;
+    width: 400px;
+    height: 400px;
+    padding: 7%;
+}
+
+/* Content */
+#friend {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    padding: 5%;
+    overflow-y: scroll;
+  }
+
+#friendImg {
+    height:110px;
+    width:auto;
+    float:left;
+    background-color:white;
+}
+  
+#name {
+    text-align: center;
+}
+
+#changeColor {
+    height: 110px;
+}
+
+#colorSquare {
+    left: 38%;
+    top: 30%;
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    background-color:yellow;
+}

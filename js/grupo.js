@@ -5,9 +5,9 @@ function searchForGroup(){
     //remove selector
     document.querySelector("input").removeEventListener("click", searchForGroup);
     //change message
-    document.getElementById("topPhrase").innerText = "Keep your watches";
+    document.getElementById("topPhrase").innerText = "Mantenham os relógios";
     document.querySelector("input").style.opacity = 0;
-    document.getElementById("lowPhrase").innerText = "together";
+    document.getElementById("lowPhrase").innerText = "juntos";
     //start animation
     let goodToGo = 0;
     while (goodToGo === 0){
@@ -66,10 +66,43 @@ function displayFoundFriends() {
         p.append(img);
         p.append(document.createTextNode(person.name));
         document.getElementById("groupMenuContainer").append(p);
+
+        p.addEventListener("click",function(){
+            sessionStorage.setItem("activeGroupMember", JSON.stringify(person));
+            window.location.href = "groupMemberPage.html";
+        })
+    });
+
+    //Add button to add group members again
+    let label = document.createElement("label");
+    label.id = "lookAgainForGroupLabel";
+    label.append(document.createTextNode("Adicionar membros ao grupo:"));
+    let input = document.createElement("input");
+    input.classList.add("button");
+    input.classList.add("buttonFindGroupAgain");
+    input.type="button";
+    input.value = "+";
+    label.append(input)
+    document.getElementById("groupMenuContainer").append(label);
+    label.addEventListener("click", function(){
+        document.getElementById("groupMenuContainer").innerHTML = " <h1 class='pressTheButtonMessage' id='topPhrase' ></h1> <label id='lookForGroupButton'><input type='button' class='button' value='+'></label><h1 class='pressTheButtonMessage' id='lowPhrase'></h1>";
+                                                       
+        //Search for a group function:
+        //change message
+        document.getElementById("topPhrase").innerText = "Mantenham os relógios";
+        document.querySelector("input").style.opacity = 0;
+        document.getElementById("lowPhrase").innerText = "juntos";
+        //start animation
+        let goodToGo = 0;
+        while (goodToGo === 0){
+            goodToGo = startFindingGroupAnimation();
+        }
     });
 
     //groupFound, no need to go through previous process
     sessionStorage.setItem('hasGroup', 'true');
+    //Set the group elements in the storage
+    sessionStorage.setItem("group",JSON.stringify(people));
 }
 
 class groupFriend {
@@ -105,3 +138,4 @@ document.addEventListener('mouseup', e => {
   touchendX = e.pageX
   checkDirection()
 })
+
