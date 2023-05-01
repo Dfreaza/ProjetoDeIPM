@@ -98,7 +98,7 @@ window.onload = function (){
     let touchendX = 0 // pos do rato quando larga o botão (eixo dos x)
         
     function checkDirection() {
-    if (touchendX-50 > touchstartX) window.location.assign('Ecra_principal.html');
+    if (touchendX-50 > touchstartX) window.location.assign('Ecra_Principal.html');
     }
 
     document.addEventListener('mousedown', e => {
