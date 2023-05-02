@@ -36,8 +36,6 @@ function main () {
 
 
 
-
-
 /** funções para voltar para trás */
 
 let touchstartX = 0 //pos do rato quando clica no ecrã (eixo dos x)

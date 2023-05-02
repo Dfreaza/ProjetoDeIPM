@@ -59,5 +59,9 @@ img {
     left: 25%;
     overflow:hidden;
     overflow-y: scroll;
+    scrollbar-width:none;
 }
 
+#conteiner::-webkit-scrollbar {
+  display: none;
+}

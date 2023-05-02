@@ -19,6 +19,11 @@ background-color: #001;
    width: 400px;
    height: 400px;
    overflow-y: scroll;
+   scrollbar-width:none;
+}
+
+#conteiner::-webkit-scrollbar {
+    display: none;
 }
 
 p, h2{

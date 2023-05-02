@@ -27,4 +27,9 @@ p{
     left: 25%;
     overflow:hidden;
     overflow-y: scroll;
+    scrollbar-width:none;
+}
+
+#container::-webkit-scrollbar {
+    display: none;
 }

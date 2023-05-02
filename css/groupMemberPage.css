@@ -24,19 +24,12 @@ body {
 }
 
 #friend {
-    overflow-y: scroll;
-    width: 400px;
-    height: 400px;
+    overflow: hidden;
     padding: 7%;
-}
-
-/* Content */
-#friend {
     position: relative;
     height: 90%;
     width: 90%;
     padding: 5%;
-    overflow-y: scroll;
   }
 
 #friendImg {

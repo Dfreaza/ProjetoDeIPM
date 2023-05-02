@@ -26,11 +26,14 @@ body {
     align-items: center; 
     background-color: #001;
     overflow-y: scroll;
+    scrollbar-width:none;
     width: 400px;
     height: 400px;
     border-radius: 10%;
 }
-
+#main_buttons::-webkit-scrollbar {
+    display: none;
+}
 
 img {
     float: left;
