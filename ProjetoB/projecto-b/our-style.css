@@ -7,3 +7,25 @@
 .goal-0 {
     background-color: #aaaaaa;
 }
+
+.goal-0:hover {
+    background-color: rgb(199, 199, 11);
+}
+
+/*  Blinker */
+
+.blinking {
+    animation: colorChange 0.8s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+      background-color: red;
+    }
+    75% {
+      background-color: yellow;
+    }
+    100% {
+      background-color: red;
+    }
+  }
