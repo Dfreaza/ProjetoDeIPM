@@ -1,3 +1,28 @@
+function startGame(){
+
+    document.querySelector("button").addEventListener("click", checkIfGameStarted);
+
+    var p = document.createElement("p");
+    p.id = "formusic";
+    document.body.appendChild(p);
+    document.getElementById("formusic").innerHTML = '<audio id="audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Pop_Goes_the_Weasel.ogg">';
+    
+    var goal = document.querySelector(".goal-0");
+    goal.addEventListener("mouseover", playMusic);
+    goal.addEventListener("mouseout", stopMusic);
+    
+
+    function playMusic(){
+        var music = document.getElementById("audio");
+        music.play();
+    }
+
+    function stopMusic(){
+        var music = document.getElementById("audio");
+        music.pause();
+        music.currentTime = 0;
+    }
+}
 /**
  * Code that executes when a click happens inside the grid.
  *
@@ -18,7 +43,7 @@
  * is the top left corner of the grid.
  */
 function processClick(interaction) {
-    //
+    startGame();
 }
 
 /**
@@ -70,30 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
         function delay(){
             setTimeout( startGame, 150 )
         }
-        function startGame(){
-
-            document.querySelector("button").addEventListener("click", checkIfGameStarted);
-
-            var p = document.createElement("p");
-            p.id = "formusic";
-            document.body.appendChild(p);
-            document.getElementById("formusic").innerHTML = '<audio id="audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Pop_Goes_the_Weasel.ogg">';
-            
-            var goal = document.querySelector(".goal-0");console.log(goal);
-            goal.addEventListener("mouseover", playMusic);
-            goal.addEventListener("mouseout", stopMusic);
-            
         
-            function playMusic(){
-                var music = document.getElementById("audio");
-                music.play();
-            }
-        
-            function stopMusic(){
-                var music = document.getElementById("audio");
-                music.pause();
-                music.currentTime = 0;
-            }
-        }
 
 });
