@@ -1,7 +1,5 @@
 function startGame(){
-
-    document.querySelector("button").addEventListener("click", checkIfGameStarted);
-
+    
     var p = document.createElement("p");
     p.id = "formusic";
     document.body.appendChild(p);
@@ -65,28 +63,6 @@ function processClick(interaction) {
  */
 function processEnd(performance) {
     //
-}
-
-/**
- * Initiates blinking on the first iteration of goal-0
- */
-function startBlinkingFunction(){
-    document.getElementsByClassName("goal-0").classList.add("blinking");
-    document.getElementById.addEventListener("click",function(){
-        document.getElementByClassName("blinking").classList.remove("blinking");
-    })
-}
-
-/**
- * Adds a variable true on session storage that the game has started and starts blinking animation
- */
-function checkIfGameStarted () {
-    if (isNaN(document.querySelector("input").value)){
-        document.querySelector("button").addEventListener("click", checkIfGameStarted) //hasntStarted
-    } else {
-        sessionStorage.setItem("hasStarted", "true");
-        startBlinkingFunction();
-    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
