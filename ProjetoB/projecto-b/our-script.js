@@ -3,8 +3,8 @@ function startGame(){
     var p = document.createElement("p");
     p.id = "formusic";
     document.body.appendChild(p);
-    document.getElementById("formusic").innerHTML = '<audio id="audio" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Pop_Goes_the_Weasel.ogg">';
-    
+    document.getElementById("formusic").innerHTML = '<audio id="audio" src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-C4.wav">';
+    //https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-G4.wav
     var goal = document.querySelector(".goal-0");
     goal.addEventListener("mouseover", playMusic);
     goal.addEventListener("mouseout", stopMusic);
