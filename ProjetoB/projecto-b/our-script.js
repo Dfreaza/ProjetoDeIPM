@@ -1,5 +1,4 @@
 function HoverMusic(){
-    
     var goal = document.querySelector(".goal-0");
     goal.addEventListener("mouseover",function(){playMusic("audioHover")});
     goal.addEventListener("mouseout", function(){stopMusic("audioHover")});
@@ -17,10 +16,6 @@ function stopMusic(audio_id){
     music.currentTime = 0;
 }
 
-function ClickMusic(){
-    var goal = document.querySelector(".goal-0");
-    goal.addEventListener("click",function(){playMusic("audioClick")});
-}
 
 /**
  * Code that executes when a click happens inside the grid.
@@ -43,7 +38,6 @@ function ClickMusic(){
  */
 function processClick(interaction) {
     HoverMusic();
-    ClickMusic();
 }
 
 /**
@@ -70,11 +64,6 @@ function processEnd(performance) {
 document.addEventListener('DOMContentLoaded', () => {
     var start = document.querySelector('button[type="submit"]');
 
-    var click = document.createElement("p");
-    click.id = "clickmusic";
-    document.body.appendChild(click);
-    document.getElementById("clickmusic").innerHTML = '<audio id="audioClick" src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-G4.wav">';
-
     var hover = document.createElement("p");
     hover.id = "hovermusic";
     document.body.appendChild(hover);
@@ -97,8 +86,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 pos.classList.remove("bliking");
             }
             
-                
-
-
     }
 });
