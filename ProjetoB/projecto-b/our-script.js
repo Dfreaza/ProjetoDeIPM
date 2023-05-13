@@ -60,7 +60,6 @@ function processClick(interaction) {
  * `processClick` function
  */
 function processEnd(performance) {
-    //
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -73,22 +72,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("hovermusic").innerHTML = '<audio id="audioHover" src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-C4.wav">';
     
     start.addEventListener("click", delay);
+<<<<<<< Updated upstream
     again.addEventListener("click", delay);
         function delay(){
             setTimeout(blinkAfterStart, 50);
             setTimeout(HoverMusic, 150);
+=======
+
+    function delay(){
+        setTimeout(blinkAfterStart, 50);
+        setTimeout(HoverMusic, 150);
+    }
+    
+    function blinkAfterStart(){
+        var goal2 = document.querySelector(".goal-0");
+        goal2.addEventListener('click', removeBlink);
+
+        var pos = document.querySelector(".goal-0");
+        pos.classList.add("blinking");
+
+        function removeBlink(){
+            pos.classList.remove("bliking");
+>>>>>>> Stashed changes
         }
-        
-        function blinkAfterStart(){
-            var goal2 = document.querySelector(".goal-0");
-            goal2.addEventListener('click', removeBlink);
-
-            var pos = document.querySelector(".goal-0");
-            pos.classList.add("blinking");
-
-            function removeBlink(){
-                pos.classList.remove("bliking");
-            }
-            
     }
 });
