@@ -93,8 +93,23 @@ document.addEventListener('DOMContentLoaded', () => {
     var start = document.querySelector('button[type="submit"]');
     start.addEventListener("click", delay);
         function delay(){
-            setTimeout( startGame, 150 )
+            setTimeout(blinkAfterStart, 50);
+            setTimeout(startGame, 150 );
         }
         
+        function blinkAfterStart(){
+            var goal2 = document.querySelector(".goal-0");
+            goal2.addEventListener('click', removeBlink);
 
+            var pos = document.querySelector(".goal-0");
+            //var posId = document.getElementById(pos);
+
+            function removeBlink(){
+                
+            }
+            
+                
+
+
+    }
 });
