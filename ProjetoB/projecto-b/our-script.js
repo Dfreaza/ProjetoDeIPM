@@ -1,26 +1,27 @@
-function startGame(){
+function HoverMusic(){
     
-    var p = document.createElement("p");
-    p.id = "formusic";
-    document.body.appendChild(p);
-    document.getElementById("formusic").innerHTML = '<audio id="audio" src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-C4.wav">';
-    //https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-G4.wav
     var goal = document.querySelector(".goal-0");
-    goal.addEventListener("mouseover", playMusic);
-    goal.addEventListener("mouseout", stopMusic);
-    
-
-    function playMusic(){
-        var music = document.getElementById("audio");
-        music.play();
-    }
-
-    function stopMusic(){
-        var music = document.getElementById("audio");
-        music.pause();
-        music.currentTime = 0;
-    }
+    goal.addEventListener("mouseover",function(){playMusic("audioHover")});
+    goal.addEventListener("mouseout", function(){stopMusic("audioHover")});
 }
+
+function playMusic(audio_id){
+    var music = document.getElementById(audio_id);
+    music.play();
+    console.log(audio_id);
+}
+
+function stopMusic(audio_id){
+    var music = document.getElementById(audio_id);
+    music.pause();
+    music.currentTime = 0;
+}
+
+function ClickMusic(){
+    var goal = document.querySelector(".goal-0");
+    goal.addEventListener("click",function(){playMusic("audioClick")});
+}
+
 /**
  * Code that executes when a click happens inside the grid.
  *
@@ -41,7 +42,8 @@ function startGame(){
  * is the top left corner of the grid.
  */
 function processClick(interaction) {
-    startGame();
+    HoverMusic();
+    ClickMusic();
 }
 
 /**
@@ -67,10 +69,21 @@ function processEnd(performance) {
 
 document.addEventListener('DOMContentLoaded', () => {
     var start = document.querySelector('button[type="submit"]');
+
+    var click = document.createElement("p");
+    click.id = "clickmusic";
+    document.body.appendChild(click);
+    document.getElementById("clickmusic").innerHTML = '<audio id="audioClick" src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-G4.wav">';
+
+    var hover = document.createElement("p");
+    hover.id = "hovermusic";
+    document.body.appendChild(hover);
+    document.getElementById("hovermusic").innerHTML = '<audio id="audioHover" src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-C4.wav">';
+    
     start.addEventListener("click", delay);
         function delay(){
             setTimeout(blinkAfterStart, 50);
-            setTimeout(startGame, 150 );
+            setTimeout(HoverMusic, 150 );
         }
         
         function blinkAfterStart(){
