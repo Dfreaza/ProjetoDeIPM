@@ -72,7 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("hovermusic").innerHTML = '<audio id="audioHover" src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-C4.wav">';
     
     start.addEventListener("click", delay);
-
+    again.addEventListener("click", delay);
+    
     function delay(){
         setTimeout(blinkAfterStart, 50);
         setTimeout(HoverMusic, 150);
