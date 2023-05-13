@@ -1,13 +1,15 @@
 function HoverMusic(){
     var goal = document.querySelector(".goal-0");
-    goal.addEventListener("mouseover",function(){playMusic("audioHover")});
-    goal.addEventListener("mouseout", function(){stopMusic("audioHover")});
+    goal.addEventListener("mouseover",function(){playMusic("audioHover", goal)});
+    goal.addEventListener("mouseout", function(){stopMusic("audioHover", goal)});
 }
 
-function playMusic(audio_id){
-    var music = document.getElementById(audio_id);
-    music.play();
-    console.log(audio_id);
+function playMusic(audio_id, goal){
+    if(goal == document.querySelector(".goal-0")){
+        var music = document.getElementById(audio_id);
+        music.play();
+        console.log(audio_id);
+    }
 }
 
 function stopMusic(audio_id){
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     start.addEventListener("click", delay);
         function delay(){
             setTimeout(blinkAfterStart, 50);
-            setTimeout(HoverMusic, 150 );
+            setTimeout(HoverMusic, 150);
         }
         
         function blinkAfterStart(){
