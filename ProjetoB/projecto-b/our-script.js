@@ -65,6 +65,7 @@ function processEnd(performance) {
 
 document.addEventListener('DOMContentLoaded', () => {
     var start = document.querySelector('button[type="submit"]');
+    var again = document.getElementById("results").querySelector('button');
 
     var hover = document.createElement("p");
     hover.id = "hovermusic";
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("hovermusic").innerHTML = '<audio id="audioHover" src="https://www.ee.columbia.edu/~dpwe/sounds/instruments/piano-C4.wav">';
     
     start.addEventListener("click", delay);
+    again.addEventListener("click", delay);
         function delay(){
             setTimeout(blinkAfterStart, 50);
             setTimeout(HoverMusic, 150);
