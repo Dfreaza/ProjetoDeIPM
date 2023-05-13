@@ -102,10 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
             goal2.addEventListener('click', removeBlink);
 
             var pos = document.querySelector(".goal-0");
-            //var posId = document.getElementById(pos);
+            pos.classList.add("blinking");
 
             function removeBlink(){
-                
+                pos.classList.remove("bliking");
             }
             
                 
