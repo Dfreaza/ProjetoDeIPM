@@ -45,6 +45,9 @@ function stopMusic(audio_id){
  * is the top left corner of the grid.
  */
 function processClick(interaction) {
+    let old = document.getElementById(sessionStorage.getItem("oldElement"))
+    old.removeEventListener("mouseover",eventPlayMusic);
+    old.removeEventListener("mouseout",eventStopMusic);
     HoverMusic();
 }
 
