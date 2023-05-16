@@ -45,7 +45,7 @@ function stopMusic(audio_id){
  * is the top left corner of the grid.
  */
 function processClick(interaction) {
-    let old = document.getElementById(sessionStorage.getItem("oldElement"))
+    let old = document.getElementById(sessionStorage.getItem("oldElement"));
     old.removeEventListener("mouseover",eventPlayMusic);
     old.removeEventListener("mouseout",eventStopMusic);
     HoverMusic();
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     again.addEventListener("click", delay);
     
     function delay(){
-        setTimeout(blinkAfterStart, 50);
-        setTimeout(HoverMusic, 50);
+        setTimeout(blinkAfterStart, 350);
+        setTimeout(HoverMusic, 350);
     }
     
     function blinkAfterStart(){
